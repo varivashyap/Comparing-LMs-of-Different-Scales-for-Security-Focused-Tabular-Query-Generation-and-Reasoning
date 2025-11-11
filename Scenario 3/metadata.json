@@ -1,0 +1,177 @@
+{
+    "table_name": "SignInLogsBetaSchema",
+    "table_description": "",
+    "columns": [
+        {
+            "column_name": "TenantId",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "SourceSystem",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "TimeStamp",
+            "data_type": "datetime",
+            "description": "",
+            "datetime_format": "%Y-%m-%d %H:%M:%S"
+        },
+        {
+            "column_name": "ResourceId",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ResultSignature",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "ResultDescription",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ErrorCode",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "ResultDescription_1",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "CorrelationId",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "SessionID",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ResourceDisplayName",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "AccountDisplayName",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "IsExternalUser",
+            "data_type": "boolean",
+            "description": ""
+        },
+        {
+            "column_name": "IsGuestUser",
+            "data_type": "boolean",
+            "description": ""
+        },
+        {
+            "column_name": "Country",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "Application",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ApplicationId",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "AuthenticationProcessingDetails_t",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "AuthenticationRequirement",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "ClientAppUsed",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "DeviceName",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "OSPlatform",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "LogOnType",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "IPAddress",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "LocationDetails",
+            "data_type": "dynamic",
+            "description": ""
+        },
+        {
+            "column_name": "RiskState",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "RiskLevelAggregated",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "RiskDetails",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "RiskDetails_1",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "UserAgent",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "AccountObjectId",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "AccountUpn",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "UserType",
+            "data_type": "categorical",
+            "description": ""
+        },
+        {
+            "column_name": "Type",
+            "data_type": "categorical",
+            "description": ""
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "table_name": "DeviceCompliance",
+    "table_description": "",
+    "columns": [
+        {
+            "column_name": "DeviceId",
+            "data_type": "id",
+            "description": "Unique identifier for the device being reported on."
+        },
+        {
+            "column_name": "DeviceName",
+            "data_type": "string",
+            "description": "Name of the device."
+        },
+        {
+            "column_name": "OsPlatform",
+            "data_type": "categorical",
+            "description": "Operating system platform of the device, such as Windows, macOS, or Linux."
+        },
+        {
+            "column_name": "IsCompliant",
+            "data_type": "bool",
+            "description": "Indicates whether the device is compliant with the organization's policies."
+        }
+    ]
+}

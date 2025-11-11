@@ -1,0 +1,176 @@
+{
+    "table_name": "SignInLogsBetaSchema",
+    "table_description": "",
+    "columns": [
+        {
+            "column_name": "TenantId",
+            "data_type": "string",
+            "description": "The Log Analytics workspace ID."
+        },
+        {
+            "column_name": "SourceSystem",
+            "data_type": "string",
+            "description": "The type of agent the event was collected by. For example,OpsManagerfor Windows agent, either direct connect or Operations Manager,Linuxfor all Linux agents, orAzurefor Azure Diagnostics."
+        },
+        {
+            "column_name": "TimeStamp",
+            "data_type": "datetime",
+            "description": "Time when the raw event was generated."
+        },
+        {
+            "column_name": "ResourceId",
+            "data_type": "string",
+            "description": "The identifier of the resource that the user signed in to."
+        },
+        {
+            "column_name": "ResultSignature",
+            "data_type": "categorical",
+            "description": "Indicates whether the sign-in was a success or failure."
+        },
+        {
+            "column_name": "ResultDescription",
+            "data_type": "string",
+            "description": "Provides the error message or the reason for failure for the corresponding sign-in activity."
+        },
+        {
+            "column_name": "ErrorCode",
+            "data_type": "categorical",
+            "description": "Provides the 5-6 digit error code that's generated during a sign-in event. 0 indicates success; other values are failures. You can find more information using the Azure AD Error Codes documentation orhttps://login.microsoftonline.com/error."
+        },
+        {
+            "column_name": "ResultDescription_1",
+            "data_type": "string",
+            "description": "Provides the error message or the reason for failure for the corresponding sign-in activity."
+        },
+        {
+            "column_name": "CorrelationId",
+            "data_type": "string",
+            "description": "The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support."
+        },
+        {
+            "column_name": "SessionID",
+            "data_type": "string",
+            "description": "Id of the session that was generated during the sign-in."
+        },
+        {
+            "column_name": "ResourceDisplayName",
+            "data_type": "string",
+            "description": "Name of the resource being used."
+        },
+        {
+            "column_name": "AccountDisplayName",
+            "data_type": "string",
+            "description": "Name of the user account that performed the sign-in."
+        },
+        {
+            "column_name": "IsExternalUser",
+            "data_type": "bool",
+            "description": "Indicates whether the user is an external user."
+        },
+        {
+            "column_name": "IsGuestUser",
+            "data_type": "bool",
+            "description": "Indicates whether the user is a guest user."
+        },
+        {
+            "column_name": "Country",
+            "data_type": "categorical",
+            "description": "The 2 letter country code from where the sign-in occurred. Depending on IP address provided, this value may not always resolve to a city or region level of detail."
+        },
+        {
+            "column_name": "Application",
+            "data_type": "categorical",
+            "description": "Name of the application being used."
+        },
+        {
+            "column_name": "ApplicationId",
+            "data_type": "string",
+            "description": "Id of the application being used."
+        },
+        {
+            "column_name": "AuthenticationProcessingDetails_t",
+            "data_type": "dynamic",
+            "description": "Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication."
+        },
+        {
+            "column_name": "AuthenticationRequirement",
+            "data_type": "string",
+            "description": "This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed."
+        },
+        {
+            "column_name": "ClientAppUsed",
+            "data_type": "categorical",
+            "description": "The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP."
+        },
+        {
+            "column_name": "DeviceName",
+            "data_type": "string",
+            "description": "Name of the device used for sign-in."
+        },
+        {
+            "column_name": "OSPlatform",
+            "data_type": "categorical",
+            "description": "Name of OS Platform used for sign-in."
+        },
+        {
+            "column_name": "LogOnType",
+            "data_type": "categorical",
+            "description": "Indicates whether sign-in was interactive or non-interactive."
+        },
+        {
+            "column_name": "IPAddress",
+            "data_type": "string",
+            "description": "The IP address of the client from where the sign-in occurred."
+        },
+        {
+            "column_name": "LocationDetails",
+            "data_type": "dynamic",
+            "description": "Provides the city, state, country/region and latitude and longitude from where the sign-in happened."
+        },
+        {
+            "column_name": "RiskState",
+            "data_type": "categorical",
+            "description": "The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, or confirmedCompromised."
+        },
+        {
+            "column_name": "RiskLevelAggregated",
+            "data_type": "categorical",
+            "description": "The aggregated risk level. Possible values: none, low, medium, high, or hidden. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden."
+        },
+        {
+            "column_name": "RiskDetails",
+            "data_type": "dynamic",
+            "description": "The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, or adminConfirmedSigninCompromised. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden."
+        },
+        {
+            "column_name": "RiskDetails_1",
+            "data_type": "dynamic",
+            "description": "The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, or adminConfirmedSigninCompromised. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden."
+        },
+        {
+            "column_name": "UserAgent",
+            "data_type": "string",
+            "description": "The user agent information related to sign-in."
+        },
+        {
+            "column_name": "AccountObjectId",
+            "data_type": "string",
+            "description": "Id representing the account."
+        },
+        {
+            "column_name": "AccountUpn",
+            "data_type": "string",
+            "description": "UPN of the user account."
+        },
+        {
+            "column_name": "UserType",
+            "data_type": "categorical",
+            "description": "Identifies whether the user is a member or guest in the tenant. Possible values are: member and guest."
+        },
+        {
+            "column_name": "Type",
+            "data_type": "categorical",
+            "description": "Name of the table."
+        }
+    ]
+}

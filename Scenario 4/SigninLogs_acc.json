@@ -1,0 +1,467 @@
+{
+    "table_name": "SigninLogs",
+    "table_description": "Contains Azure AD sign-in records",
+    "columns": [
+        {
+            "column_name": "AADTenantId",
+            "data_type": "string",
+            "category": "numeric",
+            "description": ""
+        },
+        {
+            "column_name": "Agent",
+            "data_type": "dynamic",
+            "description": "The agentic property for sign in logs. Includes the agentType and the parentAppId when the type is AgenticInstance."
+        },
+        {
+            "column_name": "AlternateSignInName",
+            "data_type": "string",
+            "description": "The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers."
+        },
+        {
+            "column_name": "AppDisplayName",
+            "data_type": "string",
+            "description": "The application name displayed in the Azure Portal."
+        },
+        {
+            "column_name": "AppId",
+            "data_type": "string",
+            "description": "The application identifier in Azure Active Directory."
+        },
+        {
+            "column_name": "AppliedConditionalAccessPolicies",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "AppliedEventListeners",
+            "data_type": "dynamic",
+            "description": "Detailed information about the listeners, such as Azure Logic Apps and Azure Functions, that were triggered by the corresponding events in the sign-in event."
+        },
+        {
+            "column_name": "AppOwnerTenantId",
+            "data_type": "string",
+            "description": "The tenant identifier of the owenr of the application in Azure Active Directory."
+        },
+        {
+            "column_name": "AuthenticationAppDeviceDetails",
+            "data_type": "string",
+            "description": "Details of the app and device state used during the most recent authentication step using an authentication app."
+        },
+        {
+            "column_name": "AuthenticationAppPolicyEvaluationDetails",
+            "data_type": "string",
+            "description": "The details of the policies applied and enforced related to the authentication app during the latest signIn step."
+        },
+        {
+            "column_name": "AuthenticationContextClassReferences",
+            "data_type": "string",
+            "description": "Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in."
+        },
+        {
+            "column_name": "AuthenticationDetails",
+            "data_type": "string",
+            "description": "The result of the authentication attempt and additional details on the authentication method."
+        },
+        {
+            "column_name": "AuthenticationMethodsUsed",
+            "data_type": "string",
+            "description": "The authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS."
+        },
+        {
+            "column_name": "AuthenticationProcessingDetails",
+            "data_type": "string",
+            "description": "Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication."
+        },
+        {
+            "column_name": "AuthenticationProtocol",
+            "data_type": "string",
+            "description": "Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode. For authentications that use protocols other than the possible values listed, the protocol type is listed as none."
+        },
+        {
+            "column_name": "AuthenticationRequirement",
+            "data_type": "string",
+            "description": "This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed."
+        },
+        {
+            "column_name": "AuthenticationRequirementPolicies",
+            "data_type": "string",
+            "description": "Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults."
+        },
+        {
+            "column_name": "AutonomousSystemNumber",
+            "data_type": "string",
+            "description": "The Autonomous System Number (ASN) of the network used by the actor."
+        },
+        {
+            "column_name": "_BilledSize",
+            "data_type": "real",
+            "description": "The record size in bytes"
+        },
+        {
+            "column_name": "Category",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ClientAppUsed",
+            "data_type": "string",
+            "description": "The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP."
+        },
+        {
+            "column_name": "ClientCredentialType",
+            "data_type": "string",
+            "description": "The type of client credential used. Examples include client assertion, client secret, etc."
+        },
+        {
+            "column_name": "ConditionalAccessPolicies",
+            "data_type": "dynamic",
+            "description": "A list of conditional access policies that are triggered by the corresponding sign-in activity."
+        },
+        {
+            "column_name": "ConditionalAccessStatus",
+            "data_type": "string",
+            "description": "The status of the conditional access policy triggered. Possible values: success, failure, or notApplied."
+        },
+        {
+            "column_name": "CorrelationId",
+            "data_type": "string",
+            "description": "The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support."
+        },
+        {
+            "column_name": "CreatedDateTime",
+            "data_type": "datetime",
+            "description": "The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z."
+        },
+        {
+            "column_name": "CrossTenantAccessType",
+            "data_type": "string",
+            "description": "Describes the type of cross-tenant access used by the actor to access the resource."
+        },
+        {
+            "column_name": "DeviceDetail",
+            "data_type": "dynamic",
+            "description": "The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser."
+        },
+        {
+            "column_name": "DurationMs",
+            "data_type": "long",
+            "description": ""
+        },
+        {
+            "column_name": "FederatedCredentialId",
+            "data_type": "string",
+            "description": "Federated Credential Id."
+        },
+        {
+            "column_name": "FlaggedForReview",
+            "data_type": "bool",
+            "description": "During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true."
+        },
+        {
+            "column_name": "GlobalSecureAccessIpAddress",
+            "data_type": "string",
+            "description": "Global secure IP address that user signed in from."
+        },
+        {
+            "column_name": "HomeTenantId",
+            "data_type": "string",
+            "description": "The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins."
+        },
+        {
+            "column_name": "HomeTenantName",
+            "data_type": "string",
+            "description": "The tenant name of the external tenant who homes the entitity taking action in the customer's tenant."
+        },
+        {
+            "column_name": "Id",
+            "data_type": "string",
+            "description": "The identifier representing the sign-in activity."
+        },
+        {
+            "column_name": "Identity",
+            "data_type": "string",
+            "description": "The display name of the actor identified in the signin."
+        },
+        {
+            "column_name": "IncomingTokenType",
+            "data_type": "string",
+            "description": "The type of token utilized to signIn (examples: primary refresh token, saml assertion)."
+        },
+        {
+            "column_name": "IPAddress",
+            "data_type": "string",
+            "description": "The IP address of the client from where the sign-in occurred."
+        },
+        {
+            "column_name": "IPAddressFromResourceProvider",
+            "data_type": "string",
+            "description": "The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null."
+        },
+        {
+            "column_name": "_IsBillable",
+            "data_type": "string",
+            "description": "Specifies whether ingesting the data is billable. When _IsBillable isfalseingestion isn't billed to your Azure account"
+        },
+        {
+            "column_name": "IsInteractive",
+            "data_type": "bool",
+            "description": "Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user."
+        },
+        {
+            "column_name": "IsRisky",
+            "data_type": "bool",
+            "description": ""
+        },
+        {
+            "column_name": "IsTenantRestricted",
+            "data_type": "bool",
+            "description": "Indicates if a signIn is under a tenant restrictions policy or not."
+        },
+        {
+            "column_name": "IsThroughGlobalSecureAccess",
+            "data_type": "bool",
+            "description": "Displays whether or not a user came through Global Secure Access service or not."
+        },
+        {
+            "column_name": "Level",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "Location",
+            "data_type": "string",
+            "description": "The 2 letter country code from where the sign-in occurred. Depending on IP address provided, this value may not always resolve to a city or region level of detail."
+        },
+        {
+            "column_name": "LocationDetails",
+            "data_type": "dynamic",
+            "description": "Provides the city, state, country/region and latitude and longitude from where the sign-in happened."
+        },
+        {
+            "column_name": "MfaDetail",
+            "data_type": "dynamic",
+            "description": "This property is deprecated."
+        },
+        {
+            "column_name": "NetworkLocationDetails",
+            "data_type": "string",
+            "description": "The network location details including the type of network used and its names."
+        },
+        {
+            "column_name": "OperationName",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "OperationVersion",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "OriginalRequestId",
+            "data_type": "string",
+            "description": "The request identifier of the first request in the authentication sequence."
+        },
+        {
+            "column_name": "OriginalTransferMethod",
+            "data_type": "string",
+            "description": "Transfer method used to initiate a session throughout all subsequent requests."
+        },
+        {
+            "column_name": "ProcessingTimeInMilliseconds",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "Resource",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ResourceDisplayName",
+            "data_type": "string",
+            "description": "The name of the resource that the user signed in to."
+        },
+        {
+            "column_name": "ResourceGroup",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ResourceId",
+            "data_type": "string",
+            "description": "The identifier of the resource that the user signed in to."
+        },
+        {
+            "column_name": "ResourceIdentity",
+            "data_type": "string",
+            "description": "The resource that the user signed in to."
+        },
+        {
+            "column_name": "ResourceOwnerTenantId",
+            "data_type": "string",
+            "description": "The tenant identifier of the owner of the resource referenced in the sign in."
+        },
+        {
+            "column_name": "ResourceProvider",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ResourceServicePrincipalId",
+            "data_type": "string",
+            "description": "The identifier of the service principal representing the target resource in the sign-in event."
+        },
+        {
+            "column_name": "ResourceTenantId",
+            "data_type": "string",
+            "description": "The tenant identifier of the resource referenced in the sign in."
+        },
+        {
+            "column_name": "ResultDescription",
+            "data_type": "string",
+            "description": "Provides the error message or the reason for failure for the corresponding sign-in activity."
+        },
+        {
+            "column_name": "ResultSignature",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "ResultType",
+            "data_type": "string",
+            "description": "Provides the 5-6 digit error code that's generated during a sign-in event. 0 indicates success; other values are failures. You can find more information using the Azure AD Error Codes documentation orhttps://login.microsoftonline.com/error."
+        },
+        {
+            "column_name": "RiskDetail",
+            "data_type": "string",
+            "description": "The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, or adminConfirmedSigninCompromised. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden."
+        },
+        {
+            "column_name": "RiskEventTypes",
+            "data_type": "string",
+            "description": "This property is deprecated."
+        },
+        {
+            "column_name": "RiskEventTypes_V2",
+            "data_type": "string",
+            "description": "The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, or generic."
+        },
+        {
+            "column_name": "RiskLevel",
+            "data_type": "string",
+            "description": ""
+        },
+        {
+            "column_name": "RiskLevelAggregated",
+            "data_type": "string",
+            "description": "The aggregated risk level. Possible values: none, low, medium, high, or hidden. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden."
+        },
+        {
+            "column_name": "RiskLevelDuringSignIn",
+            "data_type": "string",
+            "description": "The risk level during sign-in. Possible values: none, low, medium, high, or hidden. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden."
+        },
+        {
+            "column_name": "RiskState",
+            "data_type": "string",
+            "description": "The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, or confirmedCompromised."
+        },
+        {
+            "column_name": "ServicePrincipalId",
+            "data_type": "string",
+            "description": "The application identifier used for sign-in. This field is populated when you are signing in using an application."
+        },
+        {
+            "column_name": "ServicePrincipalName",
+            "data_type": "string",
+            "description": "The application name used for sign-in. This field is populated when you are signing in using an application."
+        },
+        {
+            "column_name": "SessionId",
+            "data_type": "string",
+            "description": "Id of the session that was generated during the signIn."
+        },
+        {
+            "column_name": "SessionLifetimePolicies",
+            "data_type": "string",
+            "description": "Any conditional access session management policies that were applied during the sign-in event."
+        },
+        {
+            "column_name": "SignInIdentifier",
+            "data_type": "string",
+            "description": "The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers."
+        },
+        {
+            "column_name": "SignInIdentifierType",
+            "data_type": "string",
+            "description": "The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName."
+        },
+        {
+            "column_name": "SourceSystem",
+            "data_type": "string",
+            "description": "The type of agent the event was collected by. For example,OpsManagerfor Windows agent, either direct connect or Operations Manager,Linuxfor all Linux agents, orAzurefor Azure Diagnostics"
+        },
+        {
+            "column_name": "Status",
+            "data_type": "dynamic",
+            "description": "The sign-in status. Includes the error code and description of the error (in case of a sign-in failure)."
+        },
+        {
+            "column_name": "TimeGenerated",
+            "data_type": "datetime",
+            "description": ""
+        },
+        {
+            "column_name": "TokenIssuerName",
+            "data_type": "string",
+            "description": "The name of the identity provider. For example, sts.microsoft.com."
+        },
+        {
+            "column_name": "TokenIssuerType",
+            "data_type": "string",
+            "description": "The type of identity provider. The possible values are: AzureAD, or ADFederationServices, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension."
+        },
+        {
+            "column_name": "TokenProtectionStatusDetails",
+            "data_type": "dynamic",
+            "description": "Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not."
+        },
+        {
+            "column_name": "Type",
+            "data_type": "string",
+            "description": "The name of the table"
+        },
+        {
+            "column_name": "UniqueTokenIdentifier",
+            "data_type": "string",
+            "description": "A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers."
+        },
+        {
+            "column_name": "UserAgent",
+            "data_type": "string",
+            "description": "The user agent information related to sign-in."
+        },
+        {
+            "column_name": "UserDisplayName",
+            "data_type": "string",
+            "description": "The display name of the user."
+        },
+        {
+            "column_name": "UserId",
+            "data_type": "string",
+            "description": "The identifier of the user."
+        },
+        {
+            "column_name": "UserPrincipalName",
+            "data_type": "string",
+            "description": "The UPN of the user."
+        },
+        {
+            "column_name": "UserType",
+            "data_type": "string",
+            "description": "Identifies whether the user is a member or guest in the tenant. Possible values are: member and guest."
+        }
+    ]
+}

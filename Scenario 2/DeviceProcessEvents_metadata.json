@@ -1,0 +1,136 @@
+{
+    "table_name": "DeviceProcessEvents",
+    "table_description": "",
+    "columns": [
+        {
+            "column_name": "Timestamp",
+            "data_type": "datetime",
+            "description": "Date and time when the event occurred."
+        },
+        {
+            "column_name": "DeviceId",
+            "data_type": "string",
+            "description": "Unique identifier for the device in the service."
+        },
+        {
+            "column_name": "DeviceName",
+            "data_type": "string",
+            "description": "Fully qualified domain name (FQDN) of the device."
+        },
+        {
+            "column_name": "ActionType",
+            "data_type": "categorical",
+            "description": "Type of activity that triggered the event."
+        },
+        {
+            "column_name": "FileName",
+            "data_type": "string",
+            "description": "Name of the file that the recorded action was applied to."
+        },
+        {
+            "column_name": "FolderPath",
+            "data_type": "string",
+            "description": "Folder containing the file that the recorded action was applied to."
+        },
+        {
+            "column_name": "SHA1",
+            "data_type": "string",
+            "description": "SHA-1 hash of the file that the recorded action was applied to."
+        },
+        {
+            "column_name": "SHA256",
+            "data_type": "string",
+            "description": "SHA-256 of the file that the recorded action was applied to."
+        },
+        {
+            "column_name": "MD5",
+            "data_type": "string",
+            "description": "MD5 hash of the file that the recorded action was applied to."
+        },
+        {
+            "column_name": "ProcessVersionInfoCompanyName",
+            "data_type": "categorical",
+            "description": "Company name from the version information of the newly created process."
+        },
+        {
+            "column_name": "ProcessCommandLine",
+            "data_type": "string",
+            "description": "Command line used to create the new process."
+        },
+        {
+            "column_name": "ProcessCreationTime",
+            "data_type": "datetime",
+            "description": "Date and time the process was created."
+        },
+        {
+            "column_name": "AccountDomain",
+            "data_type": "string",
+            "description": "Domain of the account."
+        },
+        {
+            "column_name": "AccountName",
+            "data_type": "string",
+            "description": "User name of the account."
+        },
+        {
+            "column_name": "AccountUpn",
+            "data_type": "string",
+            "description": "User principal name (UPN) of the account."
+        },
+        {
+            "column_name": "AccountObjectId",
+            "data_type": "id",
+            "description": "Unique identifier for the account in Azure AD."
+        },
+        {
+            "column_name": "InitiatingProcessAccountDomain",
+            "data_type": "string",
+            "description": "Domain of the account that ran the process responsible for the event."
+        },
+        {
+            "column_name": "InitiatingProcessAccountName",
+            "data_type": "string",
+            "description": "User name of the account that ran the process responsible for the event."
+        },
+        {
+            "column_name": "InitiatingProcessSHA1",
+            "data_type": "string",
+            "description": "SHA-1 hash of the process (image file) that initiated the event."
+        },
+        {
+            "column_name": "InitiatingProcessSHA256",
+            "data_type": "string",
+            "description": "SHA-256 hash of the process (image file) that initiated the event. In some cases this column may not be populated - please use the InitiatingProcessSHA1 column instead."
+        },
+        {
+            "column_name": "InitiatingProcessMD5",
+            "data_type": "string",
+            "description": "MD5 hash of the process (image file) that initiated the event."
+        },
+        {
+            "column_name": "InitiatingProcessFileName",
+            "data_type": "string",
+            "description": "Name of the process that initiated the event."
+        },
+        {
+            "column_name": "InitiatingProcessCommandLine",
+            "data_type": "string",
+            "description": "Command line used to run the process that initiated the event."
+        },
+        {
+            "column_name": "InitiatingProcessFolderPath",
+            "data_type": "string",
+            "description": "Folder containing the process (image file) that initiated the event."
+        },
+        {
+            "column_name": "InitiatingProcessParentFileName",
+            "data_type": "categorical",
+            "description": "Name of the parent process that spawned the process responsible for the event."
+        },
+        {
+            "column_name": "Type",
+            "data_type": "categorical",
+            "description": "The name of the table."
+        }
+    ]
+}

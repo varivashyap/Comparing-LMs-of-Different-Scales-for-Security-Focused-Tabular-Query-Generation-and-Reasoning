@@ -1,0 +1,86 @@
+{
+    "table_name": "BehaviorAnalytics",
+    "table_description": "",
+    "columns": [
+        {
+            "column_name": "TenantId",
+            "data_type": "string",
+            "description": "The Log Analytics workspace ID."
+        },
+        {
+            "column_name": "SourceRecordId",
+            "data_type": "string",
+            "description": "The unique Id of the source raw event."
+        },
+        {
+            "column_name": "TimeGenerated _UTC_",
+            "data_type": "datetime",
+            "description": "Time when the raw event was generated (UTC)."
+        },
+        {
+            "column_name": "ActivityType",
+            "data_type": "categorical",
+            "description": "The activity type that triggered the event."
+        },
+        {
+            "column_name": "ActionType",
+            "data_type": "categorical",
+            "description": "The specific type of action that triggered the event."
+        },
+        {
+            "column_name": "Device",
+            "data_type": "string",
+            "description": "The name of the device on which the event occurred or which reported the event, depending on the schema."
+        },
+        {
+            "column_name": "UserName",
+            "data_type": "string",
+            "description": "User name of the account."
+        },
+        {
+            "column_name": "UserPrincipalName",
+            "data_type": "string",
+            "description": "User principal name of the account."
+        },
+        {
+            "column_name": "EventSource",
+            "data_type": "string",
+            "description": "Data source for this event."
+        },
+        {
+            "column_name": "SourceIPAddress",
+            "data_type": "string",
+            "description": "The source IP address."
+        },
+        {
+            "column_name": "SourceIPLocation",
+            "data_type": "string",
+            "description": "The source Geo location based on the IP address."
+        },
+        {
+            "column_name": "DestinationIPAddress",
+            "data_type": "dynamic",
+            "description": "The hostname of the destination device."
+        },
+        {
+            "column_name": "UsersInsights",
+            "data_type": "string",
+            "description": "Users metadata and insights."
+        },
+        {
+            "column_name": "ActivityInsights",
+            "data_type": "dynamic",
+            "description": "Activity and behavioral insights."
+        },
+        {
+            "column_name": "InvestigationPriority",
+            "data_type": "numerical",
+            "description": "Investigation priority score."
+        },
+        {
+            "column_name": "Type",
+            "data_type": "categorical",
+            "description": "The name of the table."
+        }
+    ]
+}
