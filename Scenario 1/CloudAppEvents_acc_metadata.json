@@ -1,0 +1,186 @@
+{
+    "table_name": "CloudAppEvents_acc",
+    "table_description": "Information about activities in various cloud apps and services covered by Microsoft Cloud App Security.",
+    "columns": [
+        {
+            "column_name": "TenantId",
+            "data_type": "id",
+            "description": "The Log Analytics workspace ID."
+        },
+        {
+            "column_name": "AccountId",
+            "data_type": "id",
+            "description": "An identifier for the account as found by Microsoft Cloud App Security. Could be Azure Active Directory ID, user principal name, or other identifiers."
+        },
+        {
+            "column_name": "AccountType",
+            "data_type": "categorical",
+            "description": "Type of user account, indicating its general role and access levels, such as Regular, System, Admin, Application."
+        },
+        {
+            "column_name": "AdditionalFields",
+            "data_type": "dynamic",
+            "description": "Additional information about the entity or event."
+        },
+        {
+            "column_name": "RawEventData",
+            "data_type": "dynamic",
+            "description": "Raw event information from the source application or service in JSON format."
+        },
+        {
+            "column_name": "ReportId",
+            "data_type": "id",
+            "description": "Unique identifier for the event."
+        },
+        {
+            "column_name": "ObjectId",
+            "data_type": "id",
+            "description": "Unique identifier of the object that the recorded action was applied to."
+        },
+        {
+            "column_name": "ObjectType",
+            "data_type": "categorical",
+            "description": "The type of object, such as a file or a folder, that the recorded action was applied to."
+        },
+        {
+            "column_name": "ObjectName",
+            "data_type": "string",
+            "description": "Name of the object that the recorded action was applied to."
+        },
+        {
+            "column_name": "ActivityObjects",
+            "data_type": "dynamic",
+            "description": "List of objects, such as files or folders, that were involved in the recorded activity."
+        },
+        {
+            "column_name": "ActivityType",
+            "data_type": "categorical",
+            "description": "Type of activity that triggered the event."
+        },
+        {
+            "column_name": "UserAgent",
+            "data_type": "string",
+            "description": "User agent information from the web browser or other client application."
+        },
+        {
+            "column_name": "ISP",
+            "data_type": "categorical",
+            "description": "Internet service provider associated with the IP address."
+        },
+        {
+            "column_name": "City",
+            "data_type": "categorical",
+            "description": "City where the client IP address is geolocated."
+        },
+        {
+            "column_name": "CountryCode",
+            "data_type": "categorical",
+            "description": "Two-letter code indicating the country where the client IP address is geolocated."
+        },
+        {
+            "column_name": "IsAnonymousProxy",
+            "data_type": "bool",
+            "description": "Indicates whether the IP address belongs to a known anonymous proxy."
+        },
+        {
+            "column_name": "IsExternalUser",
+            "data_type": "bool",
+            "description": "Indicates whether a user inside the network doesn't belong to the organization's domain."
+        },
+        {
+            "column_name": "IsImpersonated",
+            "data_type": "bool",
+            "description": "Indicates whether the activity was performed by one user for another (impersonated) user."
+        },
+        {
+            "column_name": "IPAddress",
+            "data_type": "string",
+            "description": "IP address assigned to the device during communication."
+        },
+        {
+            "column_name": "IPCategory",
+            "data_type": "categorical",
+            "description": "Additional information about the IP address."
+        },
+        {
+            "column_name": "IPTags",
+            "data_type": "dynamic",
+            "description": "Customer-defined information applied to specific IP addresses and IP address ranges."
+        },
+        {
+            "column_name": "OSPlatform",
+            "data_type": "categorical",
+            "description": "Platform of the operating system running on the device. This indicates specific operating systems, including variations within the same family, such as Windows 10 and Windows 7."
+        },
+        {
+            "column_name": "DeviceType",
+            "data_type": "categorical",
+            "description": "Type of device based on purpose and functionality, such as network device, workstation, server, mobile, gaming console, or printer."
+        },
+        {
+            "column_name": "IsAdminOperation",
+            "data_type": "bool",
+            "description": "Indicates whether the activity was performed by an administrator."
+        },
+        {
+            "column_name": "AccountDisplayName",
+            "data_type": "string",
+            "description": "Name displayed in the address book entry for the account user. This is usually a combination of the given name, middle initial, and surname of the user."
+        },
+        {
+            "column_name": "AccountObjectId",
+            "data_type": "id",
+            "description": "Unique identifier for the account in Azure AD."
+        },
+        {
+            "column_name": "AppInstanceId",
+            "data_type": "id",
+            "description": "Unique identifier for the instance of an application."
+        },
+        {
+            "column_name": "ApplicationId",
+            "data_type": "id",
+            "description": "Unique identifier for the application."
+        },
+        {
+            "column_name": "Application",
+            "data_type": "categorical",
+            "description": "Application that performed the recorded action."
+        },
+        {
+            "column_name": "ActionType",
+            "data_type": "categorical",
+            "description": "Type of activity that triggered the event."
+        },
+        {
+            "column_name": "UserAgentTags",
+            "data_type": "dynamic",
+            "description": "More information provided by Microsoft Defender for Cloud Apps in a tag in the user agent field. Can have any of the following values: Native client, Outdated browser, Outdated operating system, Robot."
+        },
+        {
+            "column_name": "TimeGenerated _UTC_",
+            "data_type": "datetime",
+            "description": "Date and time (UTC) when the record was generated."
+        },
+        {
+            "column_name": "Timestamp _UTC_",
+            "data_type": "datetime",
+            "description": "Date and time (UTC) when the record was generated."
+        },
+        {
+            "column_name": "SourceSystem",
+            "data_type": "string",
+            "description": "Type of agent the event was collected by. For example,OpsManagerfor Windows agent, either direct connect or Operations Manager,Linuxfor all Linux agents, orAzurefor Azure Diagnostics."
+        },
+        {
+            "column_name": "Type",
+            "data_type": "categorical",
+            "description": "Name of the table."
+        },
+        {
+            "column_name": "Theme",
+            "data_type": "string",
+            "description": "Types of activities associated with the cloud application indicating the purpose or nature of the action."
+        }
+    ]
+}

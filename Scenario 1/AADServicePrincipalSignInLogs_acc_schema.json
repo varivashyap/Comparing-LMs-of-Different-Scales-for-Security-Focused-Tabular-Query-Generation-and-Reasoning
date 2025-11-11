@@ -1,0 +1,151 @@
+{
+    "table_name": "AADServicePrincipalSignInLogs_acc",
+    "table_description": "",
+    "columns": [
+        {
+            "column_name": "TenantId",
+            "data_type": "id",
+            "description": "The Log Analytics workspace ID."
+        },
+        {
+            "column_name": "SourceSystem",
+            "data_type": "categorical",
+            "description": "The type of agent the event was collected by. For example, OpsManager for Windows agent, either direct connect or Operations Manager, Linux for all Linux agents, or Azure for Azure Diagnostics."
+        },
+        {
+            "column_name": "TimeGenerated _UTC_",
+            "data_type": "datetime",
+            "description": "The date and time of the event in UTC."
+        },
+        {
+            "column_name": "OperationName",
+            "data_type": "categorical",
+            "description": "Name of the operation. For sign-ins, this value is always Sign-in activity."
+        },
+        {
+            "column_name": "OperationVersion",
+            "data_type": "categorical",
+            "description": "The REST API version that's requested by the client."
+        },
+        {
+            "column_name": "Category",
+            "data_type": "categorical",
+            "description": "Category of the sign-in event."
+        },
+        {
+            "column_name": "ResultType",
+            "data_type": "categorical",
+            "description": "Contains the error code, if any, for the sign-in operation"
+        },
+        {
+            "column_name": "ResultSignature",
+            "data_type": "categorical",
+            "description": "The result of the sign-in operation. Can be SUCCESS or FAILURE."
+        },
+        {
+            "column_name": "DurationMs",
+            "data_type": "numerical",
+            "description": "The duration of the operation in milliseconds."
+        },
+        {
+            "column_name": "CorrelationId",
+            "data_type": "object",
+            "description": ""
+        },
+        {
+            "column_name": "ResourceGroup",
+            "data_type": "id",
+            "description": "Resource group for the logs."
+        },
+        {
+            "column_name": "Location",
+            "data_type": "categorical",
+            "description": "The region of the resource emitting the event."
+        },
+        {
+            "column_name": "AppId",
+            "data_type": "id",
+            "description": "Unique GUID representing the app ID in the Azure Active Directory."
+        },
+        {
+            "column_name": "AppOwnerTenantId",
+            "data_type": "id",
+            "description": "The tenant identifier of the owner of the application in Azure Active Directory."
+        },
+        {
+            "column_name": "AuthenticationProcessingDetails",
+            "data_type": "dynamic",
+            "description": "Provides the details associated with authentication processor."
+        },
+        {
+            "column_name": "ClientCredentialType",
+            "data_type": "categorical",
+            "description": "The type of client credential used. Examples include client assertion, client secret, etc."
+        },
+        {
+            "column_name": "ConditionalAccessStatus",
+            "data_type": "categorical",
+            "description": "Status of all the conditionalAccess policies related to the sign-in."
+        },
+        {
+            "column_name": "CreatedDateTime _UTC_",
+            "data_type": "datetime",
+            "description": "Datetime of the sign-in activity."
+        },
+        {
+            "column_name": "Id",
+            "data_type": "id",
+            "description": "Unique ID representing the sign-in activity."
+        },
+        {
+            "column_name": "IPAddress",
+            "data_type": "string",
+            "description": "IP address of the client used to sign in."
+        },
+        {
+            "column_name": "LocationDetails",
+            "data_type": "dynamic",
+            "description": "Details of the sign-in location."
+        },
+        {
+            "column_name": "ResourceDisplayName",
+            "data_type": "string",
+            "description": "Name of the resource that the service principal signed into."
+        },
+        {
+            "column_name": "ResourceIdentity",
+            "data_type": "string",
+            "description": "Resource group for the logs."
+        },
+        {
+            "column_name": "ResourceServicePrincipalId",
+            "data_type": "id",
+            "description": "Service Principal Id of the resource."
+        },
+        {
+            "column_name": "ServicePrincipalId",
+            "data_type": "id",
+            "description": "ID of the service principal who initiated the sign-in."
+        },
+        {
+            "column_name": "ServicePrincipalName",
+            "data_type": "string",
+            "description": "Service Principal Name of the service principal who initiated the sign-in."
+        },
+        {
+            "column_name": "UniqueTokenIdentifier",
+            "data_type": "id",
+            "description": "Unique token identifier for the request."
+        },
+        {
+            "column_name": "Type",
+            "data_type": "categorical",
+            "description": "The name of the table."
+        },
+        {
+            "column_name": "Theme",
+            "data_type": "categorical",
+            "description": "Theme of the operation."
+        }
+    ]
+}

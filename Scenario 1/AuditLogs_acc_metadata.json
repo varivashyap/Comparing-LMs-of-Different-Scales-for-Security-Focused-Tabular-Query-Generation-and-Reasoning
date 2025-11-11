@@ -1,0 +1,161 @@
+{
+    "table_name": "AuditLogs_acc",
+    "table_description": "",
+    "columns": [
+        {
+            "column_name": "TenantId",
+            "data_type": "id",
+            "description": ""
+        },
+        {
+            "column_name": "SourceSystem",
+            "data_type": "categorical",
+            "description": "Type of agent the event was collected by. For example,OpsManagerfor Windows agent, either direct connect or Operations Manager,Linuxfor all Linux agents, or Azurefor Azure Diagnostics."
+        },
+        {
+            "column_name": "TimeGenerated _UTC_",
+            "data_type": "datetime",
+            "description": "Date and time the record was created."
+        },
+        {
+            "column_name": "ResourceId",
+            "data_type": "id",
+            "description": ""
+        },
+        {
+            "column_name": "OperationName",
+            "data_type": "categorical",
+            "description": "Name of the operation."
+        },
+        {
+            "column_name": "OperationVersion",
+            "data_type": "numerical",
+            "description": "REST API version that's requested by the client."
+        },
+        {
+            "column_name": "Category",
+            "data_type": "categorical",
+            "description": "Currently Audit is the only supported value."
+        },
+        {
+            "column_name": "ResultType",
+            "data_type": "categorical",
+            "description": "Type of the result of the operation."
+        },
+        {
+            "column_name": "ResultSignature",
+            "data_type": "categorical",
+            "description": "Type of the result. Possible values are: SUCCESS, NONE."
+        },
+        {
+            "column_name": "ResultDescription",
+            "data_type": "string",
+            "description": "Additional description of the result."
+        },
+        {
+            "column_name": "DurationMs",
+            "data_type": "numerical",
+            "description": "Property is not used and can be ignored."
+        },
+        {
+            "column_name": "CorrelationId",
+            "data_type": "id",
+            "description": "Optional GUID that's passed by the client. Can help correlate client-side operations with server-side operations and is useful when tracking logs that span services."
+        },
+        {
+            "column_name": "Resource",
+            "data_type": "string",
+            "description": "Name of resource."
+        },
+        {
+            "column_name": "ResourceGroup",
+            "data_type": "string",
+            "description": "Name of resource group."
+        },
+        {
+            "column_name": "ResourceProvider",
+            "data_type": "string",
+            "description": "Name of resource provider."
+        },
+        {
+            "column_name": "Identity",
+            "data_type": "categorical",
+            "description": "Identity from the token that was presented when the request was made. The identity can be a user account system account or service principal."
+        },
+        {
+            "column_name": "Level",
+            "data_type": "numerical",
+            "description": "Message type. This is currently always Informational."
+        },
+        {
+            "column_name": "Location",
+            "data_type": "categorical",
+            "description": "Location of the datacenter."
+        },
+        {
+            "column_name": "AdditionalDetails",
+            "data_type": "dynamic",
+            "description": "Indicates additional details on the activity."
+        },
+        {
+            "column_name": "Id",
+            "data_type": "id",
+            "description": "GUID that uniquely identifies the activity."
+        },
+        {
+            "column_name": "InitiatedBy",
+            "data_type": "dynamic",
+            "description": "User or app initiated the activity."
+        },
+        {
+            "column_name": "LoggedByService",
+            "data_type": "categorical",
+            "description": "Service that initiated the activity (For example: Self-service Password Management Core Directory B2C Invited Users Microsoft Identity Manager Privileged Identity Management."
+        },
+        {
+            "column_name": "Result",
+            "data_type": "categorical",
+            "description": "Result of the activity. Possible values are: SUCCESS FAILURE TIMEOUT UNKNOWNFUTUREVALUE."
+        },
+        {
+            "column_name": "ResultReason",
+            "data_type": "string",
+            "description": "Describes cause of failure or timeout results."
+        },
+        {
+            "column_name": "TargetResources",
+            "data_type": "dynamic",
+            "description": "Indicates information on which resource was changed due to the activity. Target Resource Type can be User Device Directory App Role Group Policy or Other."
+        },
+        {
+            "column_name": "AADTenantId",
+            "data_type": "id",
+            "description": "ID of the ADD tenant"
+        },
+        {
+            "column_name": "ActivityDisplayName",
+            "data_type": "categorical",
+            "description": "Activity name or the operation name. Examples include Create User and Add member to group. For full list see Azure AD activity list."
+        },
+        {
+            "column_name": "ActivityDateTime _UTC_",
+            "data_type": "datetime",
+            "description": "Date and time the activity was performed in UTC."
+        },
+        {
+            "column_name": "AADOperationType",
+            "data_type": "categorical",
+            "description": "Type of the operation."
+        },
+        {
+            "column_name": "Type",
+            "data_type": "categorical",
+            "description": "The name of the table."
+        },
+        {
+            "column_name": "Theme",
+            "data_type": "categorical",
+            "description": "Theme of the operation."
+        }
+    ]
+}
