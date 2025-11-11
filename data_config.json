@@ -1,0 +1,6 @@
+{
+    "table1_schema_path": "BehaviorAnalytics_metadata.json",
+    "table2_schema_path": "SignInLogs_metadata.json",
+    "table3_schema_path": "SignInLogsBetaSchema_metadata.json",
+    "output_path": "LLM-Based Generation"
+}
